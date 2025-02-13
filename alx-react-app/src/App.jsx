@@ -12,7 +12,7 @@ function App() {
       <MainContent />
       
       {/* Add UserProfile component here */}
-      <UserProfile name="David" age="31" bio="Loves hiking and biking" />
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
 
       <Footer />
     </div>
