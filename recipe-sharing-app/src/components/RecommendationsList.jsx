@@ -1,7 +1,7 @@
 import useRecipeStore from './recipeStore';
 
 const RecommendationsList = () => {
-  const recommendations = useRecipeStore((state) => state.recommendations);
+  const recommendations = useRecipeStore((state) => state.recommendations) || []; // ✅ Ensure it's always an array
   const generateRecommendations = useRecipeStore((state) => state.generateRecommendations);
 
   return (
