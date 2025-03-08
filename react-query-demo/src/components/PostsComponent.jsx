@@ -9,7 +9,6 @@ const fetchPosts = async () => {
 };
 
 function PostsComponent() {
-  // Using useQuery to fetch posts
   const { data, error, isLoading, isError, refetch } = useQuery({
     queryKey: ['posts'],
     queryFn: fetchPosts,
