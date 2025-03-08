@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Profile from "./components/Profile.jsx";
-import BlogPost from "./pages/BlogPost.jsx";
+import BlogPost from "./pages/BlogPost.jsx"; // Ensure BlogPost is imported
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import Login from "./pages/Login.jsx";
 
@@ -18,8 +18,8 @@ function App() {
             <Route path="/profile/*" element={<Profile />} />
           </Route>
 
-          {/* Dynamic Routing for Blog Posts */}
-          <Route path="/blog/:postId" element={<BlogPost />} />
+          {/* ✅ Dynamic Route for Blog Posts */}
+          <Route path="/blog/:id" element={<BlogPost />} />
 
           <Route path="/login" element={<Login />} />
         </Routes>
