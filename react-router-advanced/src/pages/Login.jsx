@@ -4,8 +4,8 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    alert("User logged in (Simulation)");
-    navigate("/profile");
+    localStorage.setItem("user", "true"); // Store user authentication
+    navigate("/profile"); // Redirect to Profile after login
   };
 
   return (
