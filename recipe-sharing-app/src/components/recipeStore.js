@@ -13,6 +13,18 @@ const useRecipeStore = create((set) => ({
   // Set the list of recipes
   setRecipes: (recipes) => set({ recipes }),
 
+  // Update an existing recipe
+  updateRecipe: (updatedRecipe) => set((state) => ({
+    recipes: state.recipes.map((recipe) =>
+      recipe.id === updatedRecipe.id ? updatedRecipe : recipe
+    ),
+  })),
+
+  // Delete a recipe
+  deleteRecipe: (recipeId) => set((state) => ({
+    recipes: state.recipes.filter((recipe) => recipe.id !== recipeId),
+  })),
+
   // Set search term for filtering
   setSearchTerm: (term) => set({ searchTerm: term }),
 
