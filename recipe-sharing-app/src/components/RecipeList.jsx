@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import useRecipeStore from '../store/recipeStore';
+import useRecipeStore from '../store/recipeStore';  // Correct path
+
 
 const RecipeList = () => {
   const recipes = useRecipeStore((state) => state.recipes) || [];
