@@ -1,11 +1,15 @@
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import useRecipeStore from './recipeStore'; // Adjust path if needed
-  // Use the relative path since recipeStore is now in the same directory
-
-
+import { useRecipeStore } from './recipeStore';
 
 const RecipeList = () => {
-  const recipes = useRecipeStore((state) => state.recipes) || [];
+  const recipes = useRecipeStore((state) => state.filteredRecipes) || []; // Get filtered recipes from Zustand store
+  const filterRecipes = useRecipeStore((state) => state.filterRecipes);
+
+  // Ensure the filtering is applied initially
+  useEffect(() => {
+    filterRecipes();
+  }, [filterRecipes]);
 
   return (
     <div>
