@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import useRecipeStore from '../store/recipeStore';  // Correct path
+import useRecipeStore from './recipeStore';  // Use the relative path since recipeStore is now in the same directory
+
 
 
 const RecipeList = () => {
